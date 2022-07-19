@@ -1,0 +1,88 @@
+name: Ntmcore
+version: '${project.version}'
+main: quaks.by.ntmcore.NTMcore
+api-version: 1.19
+prefix: NTMcore
+authors: [ quaks ]
+description: Плагин созданный специально для NTM project
+website: https://ntmproject.cf
+load: POSTWORLD
+depend:
+  - DiscordSRV
+  - ProtocolLib
+  - PlaceholderAPI
+  - EasyWhitelist
+  - Plan
+commands:
+  autograph:
+    description: Подписать предмет
+    usage: /autograph
+    aliases:
+      - aph
+  do:
+    description: Выполнить действие от третьего лица
+    usage: /do
+  gdo:
+    description: Выполнить действие от третьего лица
+    usage: /gdo
+  me:
+    description: Выполнить действие
+    usage: /me
+  gme:
+    description: Выполнить действие
+    usage: /gme
+  mute:
+    description: Выдать мут
+    usage: /mute
+  report:
+    description: Написать репорт
+    usage: /report
+  toggleglobalchat:
+    description: Отключить глобальные чаты
+    usage: /toggleglobalchat
+  msg:
+    aliases:
+      - m
+      - tell
+      - w
+    description: Отправить личное сообщение
+    usage: /msg Никнейм
+  reply:
+    description: Быстрый ответ
+    usage: /reply
+    aliases:
+      - r
+  whisper:
+    description: Быстрый ответ
+    usage: /whisper
+    aliases:
+      - wh
+  spectator:
+    description: Режим наблюдателя
+    usage: /spectator
+    aliases:
+      - sp
+  protect:
+    description: Защита карты от создания копий
+    usage: /protect
+  ban:
+    description: Бан
+    usage: /ban
+  warn:
+    description: warn
+    usage: /ban
+  ignore:
+    description: Игнорировать игрока в лс
+    usage: /ignore
+  god:
+    description: Режим бога
+    usage: /god
+  freeze:
+    description: Заморозить человека
+    usage: /freeze
+  try:
+    description: тру
+    usage: /try
+  gtry:
+    description: шо треш
+    usage: /gtry
