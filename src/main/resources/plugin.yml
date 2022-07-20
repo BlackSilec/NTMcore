@@ -12,7 +12,6 @@ depend:
   - ProtocolLib
   - PlaceholderAPI
   - EasyWhitelist
-  - Plan
 commands:
   autograph:
     description: Подписать предмет
