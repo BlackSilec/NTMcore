@@ -11,6 +11,8 @@ import github.scarsz.discordsrv.dependencies.jda.api.interactions.components.But
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.jetbrains.annotations.NotNull;
+import quaks.by.ntmcore.files.RoleList;
+import quaks.by.ntmcore.utils.ChatUtils;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -36,6 +38,25 @@ public class JDAListener extends ListenerAdapter {
                         .setDescription("**Заявка:** `"+event.getAuthor().getName()+"`")
                         .setColor(Color.YELLOW)
                         .build()).setActionRow(sendButtons(event.getAuthor().getName())).queue();
+            }
+            return;
+        }
+        if(event.getChannel().getId().equals(DiscordSRV.getPlugin().getOptionalTextChannel("admin").getId())){
+            if(!event.getMessage().isWebhookMessage()&&event.getMessage().getContentRaw().startsWith("!")){
+                String cmd = event.getMessage().getContentRaw();
+                cmd = ChatUtils.unPrefix('!',cmd);
+                cmd = ChatUtils.unSpaced(cmd);
+                Bukkit.getLogger().info(cmd);
+                if((cmd.startsWith("ban")||cmd.startsWith("warn"))&&(event.getMember().getRoles().contains(DiscordSRV.getPlugin().getJda().getRoleById(RoleList.get().getString("moderator")))||event.getMember().getRoles().contains(DiscordSRV.getPlugin().getJda().getRoleById(RoleList.get().getString("admin"))))) {
+                    String finalCmd = cmd;
+                    Bukkit.getScheduler().scheduleSyncDelayedTask(DiscordSRV.getPlugin(), () -> Bukkit.dispatchCommand(Bukkit.getConsoleSender(), finalCmd));
+                    return;
+                }
+                if((cmd.startsWith("kick")||cmd.startsWith("mute"))&&(event.getMember().getRoles().contains(DiscordSRV.getPlugin().getJda().getRoleById(RoleList.get().getString("moderator")))||event.getMember().getRoles().contains(DiscordSRV.getPlugin().getJda().getRoleById(RoleList.get().getString("admin")))||event.getMember().getRoles().contains(DiscordSRV.getPlugin().getJda().getRoleById(RoleList.get().getString("helper"))))) {
+                    String finalCmd = cmd;
+                    Bukkit.getScheduler().scheduleSyncDelayedTask(DiscordSRV.getPlugin(), () -> Bukkit.dispatchCommand(Bukkit.getConsoleSender(), finalCmd));
+                    return;
+                }
             }
         }
     }
@@ -69,4 +90,5 @@ public class JDAListener extends ListenerAdapter {
                 break;
         }
     }
+
 }
