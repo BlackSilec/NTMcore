@@ -1,0 +1,6 @@
+qu4ks:
+  amount: 1
+  warns:
+    '1':
+      power: 10
+      reason: '4'

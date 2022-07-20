@@ -32,13 +32,13 @@ public final class NTMcore extends JavaPlugin {
     @Override
     public void onEnable() {
 
-        DiscordSRV.api.subscribe(discordsrvListener); // Подсос к прослушиванию Discord
+        WarnList.setup(this);
+        SpectatorHistory.setup(this);
+        RoleList.setup(this);
+        AphList.setup(this);
+        MuteList.setup(this);
 
-        WarnList.setup();
-        SpectatorHistory.setup();
-        RoleList.setup();
-        AphList.setup();
-        MuteList.setup();
+        DiscordSRV.api.subscribe(discordsrvListener); // Подсос к прослушиванию Discord
 
         ScheduledBanMuteRoleRemover scheduledBanMuteRoleRemover = new ScheduledBanMuteRoleRemover();
         scheduledBanMuteRoleRemover.scheduleTimer(this, Bukkit.getWorld("world"));
@@ -98,7 +98,6 @@ public final class NTMcore extends JavaPlugin {
         //- Отображение ответов
         //- Вписать опку в админ чат
         //- Прописать роли и права
-
         getLogger().info("NTM - Основной плагин запущен");
     } // onEnable выполняется когда, запускается плагин
     @Override

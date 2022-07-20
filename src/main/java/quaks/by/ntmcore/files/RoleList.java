@@ -3,6 +3,7 @@ package quaks.by.ntmcore.files;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
+import quaks.by.ntmcore.NTMcore;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,12 +12,13 @@ public class RoleList {
     static String name = "rolelist"; // Имя, которое получит файл
     private static File file; // Переменная file типа File. Использование см. ниже
     private static FileConfiguration fileConfiguration; // Переменная fileConfiguration типа FileConfiguration. Использование см. ниже
-    public static void setup() {
+    public static void setup(NTMcore t) {
         file = new File(Bukkit.getServer().getPluginManager().getPlugin("Ntmcore").getDataFolder(), name+".yml"); // Загружаем в память файл {name}.yml из папки плагина. Если файла не существует - Java загрузит пустой файл и запомнит что его не существует
 
         if(!file.exists()){
             try {
                 file.createNewFile();
+                t.saveResource(name + ".yml", true);
             } catch (IOException e) {
                 e.printStackTrace();
             }// Пробуем создать файл

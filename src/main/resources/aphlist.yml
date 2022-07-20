@@ -1,0 +1,72 @@
+#item for autograph not defined:
+itemUndefined: "Возьмите предмет на которм хотите оставить подпись в ведущую руку"
+#item is not in the "autographItemList" list:
+itemNotTheList: "Похоже что на этом предмете нету места для подписи"
+#item contains the maximum number of autographs:
+itemContainsMaxAutographs: "Кто-то уже подписал этот предмет"
+
+autographItemList:
+  - WOODEN_SHOVEL
+  - STONE_SHOVEL
+  - IRON_SHOVEL
+  - DIAMOND_SHOVEL
+  - GOLDEN_SHOVEL
+  - NETHERITE_SHOVEL
+  - WOODEN_PICKAXE
+  - STONE_PICKAXE
+  - IRON_PICKAXE
+  - DIAMOND_PICKAXE
+  - GOLDEN_PICKAXE
+  - NETHERITE_PICKAXE
+  - WOODEN_AXE
+  - STONE_AXE
+  - IRON_AXE
+  - DIAMOND_AXE
+  - GOLDEN_AXE
+  - NETHERITE_AXE
+  - WOODEN_HOE
+  - STONE_HOE
+  - IRON_HOE
+  - DIAMOND_HOE
+  - GOLDEN_HOE
+  - NETHERITE_HOE
+  - WOODEN_SWORD
+  - STONE_SWORD
+  - IRON_SWORD
+  - DIAMOND_SWORD
+  - GOLDEN_SWORD
+  - NETHERITE_SWORD
+  - LEATHER_HELMET
+  - LEATHER_CHESTPLATE
+  - LEATHER_LEGGINGS
+  - LEATHER_BOOTS
+  - chainmail_HELMET
+  - chainmail_CHESTPLATE
+  - chainmail_LEGGINGS
+  - chainmail_BOOTS
+  - IRON_HELMET
+  - IRON_CHESTPLATE
+  - IRON_LEGGINGS
+  - IRON_BOOTS
+  - DIAMOND_HELMET
+  - DIAMOND_CHESTPLATE
+  - DIAMOND_LEGGINGS
+  - DIAMOND_BOOTS
+  - GOLDEN_HELMET
+  - GOLDEN_CHESTPLATE
+  - GOLDEN_LEGGINGS
+  - GOLDEN_BOOTS
+  - NETHERITE_HELMET
+  - NETHERITE_CHESTPLATE
+  - NETHERITE_LEGGINGS
+  - NETHERITE_BOOTS
+  - TURTLE_HELMET
+  - BOW
+  - FISHING_ROD
+  - CROSSBOW
+  - SPYGLASS
+  - FLINT_AND_STEEL
+  - SHIELD
+  - SHEARS
+  - ELYTRA
+  - TRIDENT
